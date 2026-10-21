@@ -1,0 +1,29 @@
+MASTER SERVICES AGREEMENT & ENTERPRISE SLA REVIEW
+Document ID: MSA-2026-CLOUD-994
+Client: Horizon Labs Inc.
+Vendor: Apex Cloud Infrastructure Ltd.
+Effective Date: November 1, 2026
+Term: 12 Months
+
+1. SCOPE OF SERVICES
+Apex Cloud will supply on-demand GPU computing clusters and high-throughput NVMe storage nodes for distributed model training and batch evaluations.
+
+2. SERVICE LEVEL COMMITMENTS
+- Minimum uptime: 99.95% monthly availability.
+- Latency threshold: Under 50ms average inter-node network latency across US-East regions.
+- Outage credits: 10% invoice discount for every 30 minutes of downtime exceeding SLA limits.
+
+3. FINANCIAL OBLIGATIONS & PAYMENT TERMS
+- Monthly recurring baseline fee: $4,500.00 USD.
+- Over-allocation compute rate: $1.85 per GPU-hour.
+- Payment terms: Net-30 from invoice receipt date.
+- Annual renewal discount: 15% reduction if renewed on or before December 15, 2026.
+
+4. COMPLIANCE, CONFIDENTIALITY & DATA RESIDENCY
+- Zero Data Retention Guarantee: The vendor shall not inspect, log, or train foundational models on client dataset inputs or outputs.
+- SOC 2 Type II compliance reports must be submitted annually.
+
+5. IMMEDIATE COMPLIANCE & LEGAL ACTION ITEMS
+- Legal Counsel (Jessica Wong): Review indemnification and liability cap clauses (Section 8.2) by October 25, 2026. (High Priority)
+- Finance Controller (Thomas Weber): Validate payment schedules and set up automated Net-30 invoice reconciliation by October 29, 2026. (Medium Priority)
+- Security Officer (Carlos Ortiz): Verify SOC 2 audit certificates and execute Data Processing Addendum (DPA) by November 1, 2026. (High Priority)
