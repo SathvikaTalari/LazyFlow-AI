@@ -32,10 +32,10 @@ export const RecentDocuments: React.FC<RecentDocumentsProps> = ({
           <FileText className="w-6 h-6" />
         </div>
         <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-          No documents processed yet
+          No documents yet
         </h3>
         <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-sm mx-auto">
-          Upload a Markdown, text, or PDF file, or try one of the 1-click samples above to see LazyFlow AI in action!
+          Upload a file or try a sample above to get started.
         </p>
       </div>
     );
@@ -50,7 +50,7 @@ export const RecentDocuments: React.FC<RecentDocumentsProps> = ({
             <span>Recent Documents</span>
           </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-            Summarized and categorized by your on-device AI agent
+            Latest summarized files
           </p>
         </div>
 

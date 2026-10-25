@@ -158,10 +158,10 @@ export const TaskManagerView: React.FC<TaskManagerViewProps> = ({
             </div>
             <div>
               <p className="text-xs font-bold text-slate-900 dark:text-white">
-                Smart Deduplication: {duplicateClusters.length} Duplicate Cluster(s) Detected
+                {duplicateClusters.length} duplicate task group{duplicateClusters.length === 1 ? '' : 's'} found
               </p>
               <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                Related tasks across multiple documents can be merged into a single deliverable.
+                Merge related tasks to avoid duplicate work.
               </p>
             </div>
           </div>
@@ -181,10 +181,10 @@ export const TaskManagerView: React.FC<TaskManagerViewProps> = ({
         <div>
           <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <CheckSquare className="w-5 h-5 text-amber-500" />
-            <span>Action Items & Deliverables</span>
+            <span>Action Items</span>
           </h2>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-            Tracking {tasks.length} total tasks with deadline intelligence & source evidence
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+            {tasks.length} total tasks across documents
           </p>
         </div>
 

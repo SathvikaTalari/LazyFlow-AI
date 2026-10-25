@@ -50,10 +50,10 @@ export const SmartBriefingView: React.FC<SmartBriefingViewProps> = ({
           <Coffee className="w-8 h-8" />
         </div>
         <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-          Your Morning Sloth Briefing Awaits
+          Your Daily Briefing
         </h3>
         <p className="text-slate-600 dark:text-slate-400 max-w-md mx-auto mb-6 text-sm">
-          LazyFlow synthesizes urgent deliverables, upcoming deadlines, cross-document risks, and grounded next steps.
+          Get a concise overview of urgent tasks, deadlines, and key updates.
         </p>
         <button
           onClick={onRegenerate}
@@ -61,7 +61,7 @@ export const SmartBriefingView: React.FC<SmartBriefingViewProps> = ({
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all shadow-sm"
         >
           <Sparkles className="w-4 h-4" />
-          <span>Generate Morning Briefing</span>
+          <span>Generate Briefing</span>
         </button>
       </div>
     );
@@ -76,7 +76,7 @@ export const SmartBriefingView: React.FC<SmartBriefingViewProps> = ({
             <div className="flex items-center gap-2.5 mb-2">
               <span className="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5">
                 <Coffee className="w-3.5 h-3.5" />
-                Smart Morning Briefing
+                Daily Briefing
               </span>
               <span className="text-xs text-emerald-100 font-medium">
                 {briefing?.date}
@@ -88,7 +88,7 @@ export const SmartBriefingView: React.FC<SmartBriefingViewProps> = ({
               )}
             </div>
             <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-              {briefing?.headline || 'Morning Sloth Briefing: Clear Bottlenecks First'}
+              {briefing?.headline || 'Daily Briefing: Priorities & Focus'}
             </h1>
             <p className="mt-2 text-emerald-50/90 text-sm md:text-base max-w-3xl leading-relaxed">
               {briefing?.executive_summary}

@@ -136,7 +136,7 @@ export const DocumentDetailModal: React.FC<DocumentDetailModalProps> = ({
                   : 'text-slate-500 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              Original Raw Document
+              Original Text
             </button>
           </div>
 
@@ -190,7 +190,7 @@ export const DocumentDetailModal: React.FC<DocumentDetailModalProps> = ({
               <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800">
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
                   <FileText className="w-4 h-4 text-emerald-500" />
-                  <span>Executive Summary</span>
+                  <span>Summary</span>
                 </h3>
                 <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line">
                   {document.summary}
@@ -201,7 +201,7 @@ export const DocumentDetailModal: React.FC<DocumentDetailModalProps> = ({
               {document.key_points && document.key_points.length > 0 && (
                 <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800">
                   <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-3">
-                    Key Discussion Points & Findings
+                    Key Points
                   </h3>
                   <ul className="space-y-2">
                     {document.key_points.map((pt, idx) => (
@@ -219,7 +219,7 @@ export const DocumentDetailModal: React.FC<DocumentDetailModalProps> = ({
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
                     <CheckSquare className="w-4 h-4 text-amber-500" />
-                    <span>Structured Action Items ({document.action_items.length})</span>
+                    <span>Action Items ({document.action_items.length})</span>
                   </h3>
                   <span className="text-xs text-slate-500">
                     {document.action_items.filter((a) => a.completed).length} completed
@@ -227,7 +227,7 @@ export const DocumentDetailModal: React.FC<DocumentDetailModalProps> = ({
                 </div>
 
                 {document.action_items.length === 0 ? (
-                  <p className="text-xs text-slate-400">No action items identified for this document.</p>
+                  <p className="text-xs text-slate-400">No action items found.</p>
                 ) : (
                   <div className="space-y-3">
                     {document.action_items.map((item) => (

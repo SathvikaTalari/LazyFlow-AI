@@ -22,25 +22,22 @@ export const SlothBanner: React.FC<SlothBannerProps> = ({
         <div className="flex-1 space-y-3 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-emerald-200 text-xs font-semibold">
             <Sparkles className="w-3.5 h-3.5 text-emerald-300" />
-            <span>Hacktoberfest: Slow and Steady AI</span>
+            <span>100% Private On-Device AI</span>
           </div>
 
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight">
-            Take it slow. <br className="hidden sm:inline" />
-            <span className="text-emerald-300">Let local AI flow.</span>
+          <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white leading-tight">
+            Take it slow. <span className="text-emerald-300">Let local AI flow.</span>
           </h1>
 
-          <p className="text-sm md:text-base text-emerald-100/90 max-w-xl leading-relaxed">
-            Stop drowning in unread meeting notes, endless PRs, and messy folders. LazyFlow AI runs
-            100% locally with open-weight models to summarize documents, extract high-priority action items,
-            and organize your digital workspace.
+          <p className="text-sm text-emerald-100/90 max-w-lg leading-relaxed">
+            Summarize notes, extract tasks, and organize your work — running entirely on your machine.
           </p>
 
           {/* Action buttons */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-1">
             <button
               onClick={onQuickUpload}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-slate-900 font-bold text-sm shadow-md hover:bg-emerald-50 transition-all hover:scale-105"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white text-slate-900 font-bold text-xs sm:text-sm shadow-md hover:bg-emerald-50 transition-all hover:scale-105"
             >
               <UploadCloud className="w-4 h-4 text-emerald-600" />
               <span>Process Document</span>
@@ -48,17 +45,17 @@ export const SlothBanner: React.FC<SlothBannerProps> = ({
 
             <button
               onClick={onOpenSamples}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-semibold text-sm backdrop-blur-sm border border-white/20 transition-all"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-semibold text-xs sm:text-sm backdrop-blur-sm border border-white/20 transition-all"
             >
               <FolderOpen className="w-4 h-4 text-emerald-200" />
-              <span>1-Click Sample Demos</span>
+              <span>Sample Demos</span>
             </button>
 
             <button
               onClick={onOpenDigest}
-              className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-medium text-emerald-200 hover:text-white transition-colors"
+              className="flex items-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-medium text-emerald-200 hover:text-white transition-colors"
             >
-              <span>View Today's Digest</span>
+              <span>Today's Digest</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>

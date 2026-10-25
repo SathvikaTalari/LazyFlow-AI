@@ -23,21 +23,20 @@ export const ProcessingModal: React.FC<ProcessingModalProps> = ({
   const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (!isOpen) return;
+
+    const timer = setTimeout(() => {
       setCurrentStep(0);
-      return;
-    }
+    }, 0);
 
     const interval = setInterval(() => {
-      setCurrentStep((prev) => {
-        if (prev < STEPS.length - 1) {
-          return prev + 1;
-        }
-        return prev;
-      });
+      setCurrentStep((prev) => (prev < STEPS.length - 1 ? prev + 1 : prev));
     }, 4500);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, [isOpen]);
 
   if (!isOpen) return null;

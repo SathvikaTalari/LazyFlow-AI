@@ -53,19 +53,24 @@ export const BackgroundQueueView: React.FC<BackgroundQueueViewProps> = ({
     }
   };
 
+  const hasActiveQueueItem = queueItems.some(
+    (i) => i.status === 'queued' || i.status === 'processing'
+  );
+
   useEffect(() => {
     loadQueue();
-    // Poll every 2.5 seconds if any item is active
+  }, []);
+
+  useEffect(() => {
+    if (!hasActiveQueueItem) return;
+
     const interval = setInterval(() => {
-      const hasActive = queueItems.some((i) => i.status === 'queued' || i.status === 'processing');
-      if (hasActive) {
-        loadQueue();
-        onRefreshDocs?.();
-      }
+      loadQueue();
+      onRefreshDocs?.();
     }, 2500);
 
     return () => clearInterval(interval);
-  }, [queueItems.length, queueItems.map((i) => i.status).join(',')]);
+  }, [hasActiveQueueItem, onRefreshDocs]);
 
   const handleToggleSampleSelect = (id: string) => {
     setSelectedSamples((prev) =>

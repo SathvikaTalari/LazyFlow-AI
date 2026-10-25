@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">
-              Slow & Steady • 100% Privacy • Open-Weight AI
+              Private On-Device AI
             </p>
           </div>
         </div>

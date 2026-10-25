@@ -66,16 +66,15 @@ export const DailyWorkflowView: React.FC<DailyWorkflowViewProps> = ({
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-200 text-xs font-semibold">
               <Calendar className="w-3.5 h-3.5 text-emerald-300" />
-              <span>Unified Daily Workspace • {date}</span>
+              <span>Daily Overview • {date}</span>
             </div>
 
             <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
-              Today's Flow: Slow, Steady & Focused
+              Today's Flow
             </h1>
 
-            <p className="text-xs md:text-sm text-emerald-100 max-w-xl leading-relaxed">
-              Synthesized from across your documents. Tackle overdue items first, review today's top
-              deliverables, and navigate cross-document dependencies without context overload.
+            <p className="text-xs md:text-sm text-emerald-100 max-w-lg leading-relaxed">
+              Your top priorities, upcoming deadlines, and overdue tasks in one place.
             </p>
           </div>
 

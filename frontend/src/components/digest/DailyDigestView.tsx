@@ -25,11 +25,11 @@ export const DailyDigestView: React.FC<DailyDigestViewProps> = ({
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
               <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-              <span>AI Synthesized Daily Briefing</span>
+              <span>Daily Digest</span>
             </div>
 
             <h1 className="text-2xl md:text-3xl font-extrabold text-white">
-              {digest?.title || 'Daily Sloth Digest'}
+              {digest?.title || 'Daily Digest'}
             </h1>
 
             <div className="flex items-center gap-4 text-xs text-indigo-200">
@@ -40,7 +40,7 @@ export const DailyDigestView: React.FC<DailyDigestViewProps> = ({
               <span>•</span>
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                <span>On-device Synthesis</span>
+                <span>Local AI</span>
               </span>
             </div>
           </div>
@@ -51,7 +51,7 @@ export const DailyDigestView: React.FC<DailyDigestViewProps> = ({
             className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs shadow-md transition-all disabled:opacity-50"
           >
             <RotateCw className={`w-3.5 h-3.5 ${isGenerating ? 'animate-spin text-white' : ''}`} />
-            <span>{isGenerating ? 'Synthesizing...' : 'Regenerate Briefing'}</span>
+            <span>{isGenerating ? 'Generating...' : 'Regenerate'}</span>
           </button>
         </div>
       </div>
@@ -59,18 +59,18 @@ export const DailyDigestView: React.FC<DailyDigestViewProps> = ({
       {/* Executive Overview */}
       <div className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-colors">
         <h2 className="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-          <span>Executive Daily Overview</span>
+          <span>Overview</span>
         </h2>
         <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line">
           {digest?.summary ||
-            'Upload documents to synthesize today’s cross-cutting priorities and focus themes.'}
+            'Upload documents to generate today’s digest.'}
         </p>
 
         {/* Highlights */}
         {digest?.highlights && digest.highlights.length > 0 && (
           <div className="mt-8">
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
-              Key Strategic Takeaways
+              Key Highlights
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {digest.highlights.map((hl, idx) => (

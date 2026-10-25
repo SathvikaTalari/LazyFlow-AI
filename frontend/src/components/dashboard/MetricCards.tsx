@@ -40,18 +40,18 @@ export const MetricCards: React.FC<MetricCardsProps> = ({
           <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-500 transition-colors" />
         </div>
         <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-          Documents Processed
+          Documents
         </p>
         <div className="flex items-baseline gap-2 mt-1">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
             {docsCount}
           </h2>
           <span className="text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
-            Stored Locally
+            Local
           </span>
         </div>
         <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-2">
-          Markdown, PDF, DOCX, Text
+          PDF, DOCX, TXT, MD
         </p>
       </div>
 
@@ -67,7 +67,7 @@ export const MetricCards: React.FC<MetricCardsProps> = ({
           <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-amber-500 transition-colors" />
         </div>
         <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-          Pending Action Items
+          Pending Tasks
         </p>
         <div className="flex items-baseline gap-2 mt-1">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
@@ -97,7 +97,7 @@ export const MetricCards: React.FC<MetricCardsProps> = ({
           </span>
         </div>
         <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-          Productivity Saved
+          Time Saved
         </p>
         <div className="flex items-baseline gap-2 mt-1">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
@@ -108,7 +108,7 @@ export const MetricCards: React.FC<MetricCardsProps> = ({
           </span>
         </div>
         <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-2">
-          Skipped repetitive skimming
+          Estimated reading time
         </p>
       </div>
 
@@ -132,7 +132,7 @@ export const MetricCards: React.FC<MetricCardsProps> = ({
           </span>
         </div>
         <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-          Local Open-Weight Model
+          Local AI Model
         </p>
         <div className="flex items-baseline gap-2 mt-1 truncate">
           <h2 className="text-lg font-bold text-slate-900 dark:text-white truncate">
@@ -140,7 +140,7 @@ export const MetricCards: React.FC<MetricCardsProps> = ({
           </h2>
         </div>
         <p className="text-[11px] text-emerald-600 dark:text-emerald-400 mt-2 font-medium">
-          100% On-Device • Zero Leakage
+          100% On-Device
         </p>
       </div>
     </div>

@@ -47,7 +47,7 @@ export const GuidedDemoModal: React.FC<GuidedDemoModalProps> = ({
       executeAction: async () => {
         setIsExecuting(true);
         try {
-          await onLoadSample('roadmap-meeting');
+          await onLoadSample('sample-roadmap');
         } finally {
           setIsExecuting(false);
         }

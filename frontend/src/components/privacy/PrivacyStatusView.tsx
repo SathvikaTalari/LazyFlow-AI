@@ -16,17 +16,16 @@ export const PrivacyStatusView: React.FC = () => {
   const [report, setReport] = useState<PrivacyVerificationReport | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);
 
-  const loadStatus = async () => {
-    try {
-      const data = await fetchPrivacyStatus();
-      setReport(data);
-    } catch (err) {
-      console.error('Failed to load privacy status:', err);
-    }
-  };
-
   useEffect(() => {
-    loadStatus();
+    let mounted = true;
+    fetchPrivacyStatus()
+      .then((data) => {
+        if (mounted) setReport(data);
+      })
+      .catch((err) => console.error('Failed to load privacy status:', err));
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const handleRunAudit = async () => {

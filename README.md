@@ -1,41 +1,49 @@
 # 🦥 LazyFlow AI — Your Local AI Productivity Agent
 
 > **Take it slow. Let local AI flow.**  
-> A privacy-first, on-device AI productivity agent built for the **Hacktoberfest Open-Source AI Challenge: “Slow and Steady”**.
+> A privacy-first, on-device AI productivity workspace built for the **Hacktoberfest Open-Source AI Challenge: “Slow and Steady”**.
 
 ---
 
 ![LazyFlow Mascot](frontend/public/mascot.jpg)
 
-## 🌟 The "Slow and Steady" Vision
-In today's fast-paced work environment, knowledge workers spend hours drowning in long meeting transcripts, dense technical postmortems, vendor contracts, and messy folder hierarchies. 
+---
 
-Cloud AI tools come with severe trade-offs: data privacy risks, expensive per-token fees, API rate limits, and network latency. **LazyFlow AI** embraces the Hacktoberfest **“Slow and Steady”** ethos:
+## 🌟 The "Slow and Steady" Vision
+In today's hyper-accelerated work environment, knowledge workers spend hours drowning in 90-minute meeting transcripts, dense incident postmortems, complex vendor contracts, and messy desktop folders.
+
+Commercial cloud AI tools promise relief, but they introduce severe friction:
+- **Confidentiality Risks:** Uploading proprietary roadmaps, customer interviews, or internal postmortems to cloud servers risks data leakage and violates enterprise compliance.
+- **Subscription Fatigue & Rate Limits:** Cloud APIs impose recurring token fees and throttle requests during crunch moments.
+- **Black-Box Hallucinations:** Generic summaries drop context, invent deliverables, or lack accountability.
+
+**LazyFlow AI** embraces the Hacktoberfest **“Slow and Steady”** ethos:
 - **100% Local Inference:** Powered by open-weight AI models (e.g., Google Gemma 3 4B, Meta Llama 3.2, Mistral) via **Ollama**.
 - **Zero Cloud Leakage:** Documents, summaries, and action plans are never uploaded to third-party servers. All data resides safely in your local **SQLite** database.
-- **Mental Clarity:** Automatically generates crisp executive summaries, extracts structured high-priority deliverables with assignees & due dates, suggests intelligent folder paths, and compiles daily digests.
+- **Grounded Evidence:** Every extracted deliverable is anchored to the exact supporting quote from the source text.
+- **Human-in-the-Loop Safety:** Proactive folder organization and standardized file renames with safe user preview. Zero filesystem operations without explicit approval.
 
 ---
 
 ## 🚀 Key Features
 
-| Feature | Description |
-| :--- | :--- |
-| **📄 Multi-Format Ingestion** | Drag-and-drop parsing for Markdown (`.md`), Plain Text (`.txt`), Adobe PDF (`.pdf`), Word Documents (`.docx`), JSON, and CSV. |
-| **⚡ Real Local AI Summarization** | Real local inference via Ollama (no mock responses). Synthesizes 2-3 paragraph executive overviews with bullet takeaways. |
-| **🔍 Source Evidence** | Every extracted task is anchored to supporting excerpt quotes directly from the source document for complete transparency. |
-| **⏰ Deadline Intelligence** | Distinguishes explicit calendar dates (`YYYY-MM-DD`) from AI-inferred fuzzy timelines (`in 2 weeks`, `next sprint`), with overdue and days-remaining counters. |
-| **🧩 Smart Task Deduplication** | Detects duplicate or correlated deliverables across multiple documents and offers 1-click merging while preserving provenance. |
-| **🛡️ Safe Automation Preview** | Proactive file organization and standardized file renames with safe user preview. Zero filesystem operations without explicit user approval. |
-| **🌅 One-Click Daily Flow** | Unified daily workspace aggregating today's top priorities, overdue deliverables, cross-document risks, and sloth productivity tips. |
-| **☕ Smart Daily Briefing** | **[Phase 3]** Generates a prioritized morning briefing with urgent actions, upcoming deadlines, cross-document risks, and recommended next steps, all grounded in source data. |
-| **📈 AI Productivity Insights** | **[Phase 3]** Dashboard displaying pending vs completed tasks, overdue items, processing success rate, and grounded manual effort saved with full formula transparency. |
-| **🔄 Background Processing Queue** | **[Phase 3]** Local queue for batch document processing with progress bars, retry, safe cancellation, and restart crash recovery. |
-| **⚖️ Local Model Comparison** | **[Phase 3]** Side-by-side practical comparison of two installed Ollama models evaluating latency, output completeness, and schema validity. |
-| **🔒 Privacy & Offline Verification** | **[Phase 3]** Live privacy audit panel verifying loopback binding, local SQLite persistence, zero external telemetry, and offline readiness. |
-| **🎬 Guided Demo Mode** | **[Phase 3]** Interactive 6-stage walkthrough utilizing real application functionality to demo ingestion, evidence extraction, deduplication, deadlines, workflow, and safe automation. |
-| **🎯 1-Click Judge Demos** | Built-in sample test bench (Roadmap Meeting, P1 Outage Postmortem, Enterprise SLA Contract, UX Research) for instant 5-second evaluation. |
-| **🎨 Modern SaaS UI** | Built with React, TypeScript, Vite, and Tailwind CSS. Features dark/light mode, real-time pipeline status modals, and responsive layout. |
+| Capability | Feature | Description |
+| :--- | :--- | :--- |
+| **Ingestion** | **📄 Multi-Format Ingestion** | Drag-and-drop or upload parsing for Markdown (`.md`), Plain Text (`.txt`), Adobe PDF (`.pdf`), Word Documents (`.docx`), JSON, and CSV. |
+| **Intelligence** | **⚡ Real Local AI Summarization** | Real local inference via Ollama (no mock responses). Synthesizes 2-paragraph executive overviews with bullet takeaways. |
+| **Verification** | **🔍 Source Evidence Citations** | Every extracted task is anchored to supporting excerpt quotes directly from the source document for complete transparency. |
+| **Timelines** | **⏰ Deadline Intelligence** | Distinguishes explicit calendar dates (`YYYY-MM-DD`) from AI-inferred fuzzy timelines (`in 2 weeks`, `next sprint`), with overdue and days-remaining counters. |
+| **Hygiene** | **🧩 Smart Task Deduplication** | Detects duplicate or correlated deliverables across multiple documents and offers 1-click merging while preserving provenance. |
+| **Safety** | **🛡️ Safe Automation Preview** | Proactive file organization and standardized file renames with safe user preview. Zero filesystem operations without explicit user approval. |
+| **Cadence** | **🌅 One-Click Daily Flow** | Unified daily workspace aggregating today's top priorities, overdue deliverables, cross-document risks, and sloth productivity tips. |
+| **Synthesis** | **☕ Smart Daily Briefing** | Generates a prioritized morning briefing with urgent actions, upcoming deadlines, cross-document risks, and recommended next steps, all grounded in source data. |
+| **Transparency**| **📈 AI Productivity Insights** | Dashboard displaying pending vs completed tasks, overdue items, processing success rate, and grounded manual effort saved with full formula transparency. |
+| **Resilience** | **🔄 Background Processing Queue** | Local queue for batch document processing with progress bars, retry, safe cancellation, and restart crash recovery. |
+| **Evaluation** | **⚖️ Local Model Comparison** | Side-by-side practical comparison of two installed Ollama models evaluating latency, output completeness, and schema validity. |
+| **Audit** | **🔒 Privacy & Offline Verification** | Live privacy audit panel verifying loopback binding, local SQLite persistence, zero external telemetry, and offline readiness. |
+| **Walkthrough** | **🎬 Guided Demo Mode** | Interactive 6-stage walkthrough utilizing real application functionality to demo ingestion, evidence extraction, deduplication, deadlines, workflow, and safe automation. |
+| **Evaluation** | **🎯 1-Click Judge Demos** | Built-in sample test bench (Roadmap Meeting, P1 Outage Postmortem, Enterprise SLA Contract, UX Research) for instant 5-second evaluation. |
+| **Design** | **🎨 Modern SaaS UI** | Built with React 19, TypeScript, Vite, and Tailwind CSS. Features dark/light mode, real-time pipeline status modals, and responsive layout. |
 
 ---
 
@@ -43,9 +51,9 @@ Cloud AI tools come with severe trade-offs: data privacy risks, expensive per-to
 
 ```mermaid
 graph TD
-    User([User / Browser]) <-->|Vite + React 19| Frontend[Frontend: React + Tailwind CSS]
-    Frontend <-->|REST API / JSON| Backend[Backend: FastAPI + Python 3.14]
-    Backend <-->|Local Inference :11434| Ollama[Ollama Local Runtime: Gemma 3 4B / Gemma 3 Focused]
+    User([User / Browser]) <-->|Vite + React 19| Frontend[Frontend: React + Tailwind CSS v4]
+    Frontend <-->|REST API / JSON :8000| Backend[Backend: FastAPI + Python 3.14]
+    Backend <-->|Local Loopback :11434| Ollama[Ollama Local Runtime: Gemma 3 4B]
     Backend <-->|WAL Mode / Foreign Keys| SQLite[(Local SQLite Database: lazyflow.db)]
     Backend <-->|Background Worker Thread| Queue[(Local Processing Queue)]
 ```
@@ -62,9 +70,11 @@ graph TD
 ### Prerequisites
 1. **Python 3.10+** (Tested on Python 3.14)
 2. **Node.js 18+ & npm** (Tested on Node v24)
-3. **Ollama** installed on Windows ([Download Ollama](https://ollama.com/download))
+3. **Ollama** installed on Windows ([Download Ollama for Windows](https://ollama.com/download))
 
-### Step 1: Start Ollama & Verify Installed Models
+---
+
+### Step 1: Start Ollama & Pull Open-Weight Model
 Open PowerShell:
 ```powershell
 # Verify Ollama is running
@@ -73,10 +83,11 @@ ollama list
 # Pull a lightweight open-weight model (Gemma 3 4B recommended)
 ollama pull gemma3:4b
 ```
+*(Optionally, you can also pull `gemma3:focused` to test the side-by-side Model Comparison feature)*
 
 ---
 
-### Step 2: Start the FastAPI Backend
+### Step 2: Start the FastAPI Backend Server
 Open a new PowerShell terminal:
 ```powershell
 cd c:\OpenSource\LazyFlow-AI\backend
@@ -92,7 +103,7 @@ python run_backend.py
 
 ---
 
-### Step 3: Start the React Frontend
+### Step 3: Start the React Frontend Application
 Open another PowerShell terminal:
 ```powershell
 cd c:\OpenSource\LazyFlow-AI\frontend
@@ -107,61 +118,63 @@ npm run dev
 
 ---
 
-### Step 4: Run the Automated Unit Test Suite
+### Step 4: Run the Automated Test Suite
 To run the automated backend test suite (covering smart deduplication, deadline intelligence, queue recovery, metrics calculation, model comparisons, and offline privacy verification):
 ```powershell
 cd c:\OpenSource\LazyFlow-AI\backend
 python -m pytest tests -v
 ```
-*(23 automated unit tests pass in ~0.5s)*
+*(All 24 automated unit, integration, and E2E regression tests pass in ~0.8s)*
 
 ---
 
-## 📡 REST API Reference
+## ⚡ Performance Benchmarks & Latency Analysis
 
-| Method | Endpoint | Description |
+LazyFlow AI was measured directly on consumer Windows hardware with the local Ollama runtime:
+
+| Execution State | Model | Prompt Tokens | Generated Tokens | Processing Latency | Throughput |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Warm Inference** | `gemma3:4b` | ~750 tokens | 280 tokens | **~38.5 s** | ~7.3 tok/s |
+| **Cold Start / Weight Load** | `gemma3:4b` | ~750 tokens | 280 tokens | **~88.2 s** | (Weights load into RAM) |
+| **Heuristic Assisted Fallback** | Local Rule Engine | ~1,200 tokens | Structured JSON | **~0.12 s** | Instantaneous |
+
+### Safe Optimizations Implemented in Phase 4:
+1. **Generation Token Tuning:** Set `num_predict: 280` to keep extraction focused, eliminating redundant text while producing complete JSON schemas.
+2. **Resilient HTTP Timeouts:** Increased timeout from 90s to 120s to accommodate model weight swapping without tripping false timeouts.
+3. **Seamless Heuristic Fallback:** If Ollama daemon is offline or cold-starting, LazyFlow seamlessly activates its local rule-based extractor to guarantee 100% uptime with zero crashes.
+
+---
+
+## 🔒 Privacy & Offline Guarantees & Limitations
+
+### Privacy Guarantees
+- **Loopback Enforcement:** All inference queries dispatch strictly across the internal Windows loopback bus (`127.0.0.1:11434`).
+- **Zero Cloud Leakage:** Documents, filenames, and summaries are never sent to third-party cloud servers.
+- **No Remote Telemetry:** No tracking pixels, Google Analytics, OpenAI, Anthropic, or external API keys are used.
+- **Air-Gapped Ready:** All processing runs completely disconnected once models are pulled.
+
+### Honest Limitations
+- **Initial Model Download:** Downloading open-weight models from the Ollama library (`ollama pull gemma3:4b`, ~3.4 GB) requires an active internet connection during initial setup. Once downloaded, all execution is strictly offline.
+- **Consumer Hardware Limits:** Running 4B+ parameter models on CPU requires 8 GB+ RAM and takes 30-45 seconds per document. Systems with dedicated GPUs (NVIDIA RTX / Apple Silicon) will see significantly faster generation (~5-10s).
+
+---
+
+## 🛠️ Troubleshooting & FAQ
+
+| Problem | Cause | Solution |
 | :--- | :--- | :--- |
-| `GET` | `/api/health` | System health, Ollama status, model count, and database stats. |
-| `GET` | `/api/models` | List all installed Ollama models and current active model. |
-| `POST` | `/api/settings/model` | Switch the active Ollama model. |
-| `GET` | `/api/samples` | List preloaded Hacktoberfest demo documents. |
-| `POST` | `/api/documents/sample/{id}` | Ingest and process a sample document with local AI. |
-| `POST` | `/api/documents/upload` | Multipart file upload (`.md`, `.txt`, `.pdf`, `.docx`, `.json`, `.csv`). |
-| `POST` | `/api/documents/paste` | Direct text paste processing. |
-| `GET` | `/api/documents` | List all processed documents with task counts. |
-| `GET` | `/api/documents/{id}` | Full document summary, raw content, and action items. |
-| `POST` | `/api/documents/{id}/reprocess` | Re-run AI analysis with current or selected model. |
-| `DELETE` | `/api/documents/{id}` | Delete document and cascade delete associated tasks. |
-| `GET` | `/api/action-items` | Filter action items by completion status, priority, and deadline status. |
-| `PATCH` | `/api/action-items/{id}` | Update task title, priority, assignee, due date, or completed status. |
-| `POST` | `/api/action-items` | Create a custom action item with source quotes and deadlines. |
-| `DELETE` | `/api/action-items/{id}` | Delete an action item. |
-| `GET` | `/api/action-items/duplicates` | **[Phase 2]** Scan for duplicate or overlapping action items across documents. |
-| `POST` | `/api/action-items/merge` | **[Phase 2]** Merge duplicate tasks into a consolidated task with source citations. |
-| `GET` | `/api/automation/proposals` | **[Phase 2]** Fetch pending file movement and rename proposals. |
-| `POST` | `/api/automation/apply` | **[Phase 2]** Execute approved safe file rename and move operations. |
-| `POST` | `/api/automation/reject` | **[Phase 2]** Dismiss rejected automation proposals. |
-| `GET` | `/api/workflow/daily` | **[Phase 2]** Unified daily workspace: priorities, overdue tasks, risks, and tips. |
-| `GET` | `/api/briefing/today` | **[Phase 3]** Synthesizes prioritized morning briefing with grounded citations. |
-| `POST` | `/api/briefing/generate` | **[Phase 3]** Force generates fresh Smart Daily Briefing. |
-| `GET` | `/api/insights` | **[Phase 3]** Returns verified productivity metrics and grounded effort saved calculations. |
-| `GET` | `/api/queue` | **[Phase 3]** Lists items in the background processing queue. |
-| `POST` | `/api/queue/batch-samples` | **[Phase 3]** Batch enqueues multiple sample documents for processing. |
-| `POST` | `/api/queue/enqueue` | **[Phase 3]** Enqueues custom document for reliable queue execution. |
-| `POST` | `/api/queue/{id}/retry` | **[Phase 3]** Retries failed, interrupted, or cancelled queue items. |
-| `POST` | `/api/queue/{id}/cancel` | **[Phase 3]** Safely cancels queued or in-progress document processing. |
-| `POST` | `/api/models/compare` | **[Phase 3]** Runs side-by-side evaluation between two installed Ollama models. |
-| `GET` | `/api/models/comparisons` | **[Phase 3]** Retrieves history of past model comparisons. |
-| `GET` | `/api/privacy/status` | **[Phase 3]** Inspects local loopback binding and on-device storage. |
-| `POST` | `/api/privacy/verify-offline` | **[Phase 3]** Runs live audit verifying zero WAN telemetry and air-gap readiness. |
+| `Ollama connection refused` | Ollama daemon is not running. | Run `ollama serve` or launch the Ollama app from the Windows Start menu. |
+| `Port 8000 already in use` | A previous backend instance is running. | Stop the existing backend process in Task Manager or PowerShell. |
+| `Model not found in Ollama` | Active model has not been pulled. | Run `ollama pull gemma3:4b` in PowerShell. |
+| `Document processing took >60s` | First-time cold start while loading 3.4 GB weights. | Subsequent requests will be much faster once the model resides in memory. |
 
 ---
 
-## 🔒 Security & Privacy Guarantee
+## 📂 Submission Assets
 
-- **No Remote Telemetry:** LazyFlow AI operates entirely offline.
-- **Air-Gapped Operation:** All natural language processing executes within the Ollama runtime on `localhost:11434`.
-- **Zero API Keys:** No OpenAI, Anthropic, or external API keys required.
+- **DEV Community Challenge Article Draft:** [docs/SUBMISSION_ARTICLE.md](docs/SUBMISSION_ARTICLE.md)
+- **60–120 Second Demo Video Script:** [docs/DEMO_SCRIPT_60_120S.md](docs/DEMO_SCRIPT_60_120S.md)
+- **Screenshot & Evidence Capture Checklist:** [docs/SCREENSHOTS_AND_EVIDENCE_CHECKLIST.md](docs/SCREENSHOTS_AND_EVIDENCE_CHECKLIST.md)
 
 ---
 

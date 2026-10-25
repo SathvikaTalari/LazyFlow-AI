@@ -222,7 +222,7 @@ Document ({filename or 'Doc'}):
         "format": "json",
         "stream": False,
         "options": {
-            "num_predict": 380,
+            "num_predict": 280,
             "num_ctx": 2048,
             "temperature": 0.2
         }
@@ -232,7 +232,7 @@ Document ({filename or 'Doc'}):
         response = requests.post(
             f"{OLLAMA_BASE_URL}/api/generate",
             json=payload,
-            timeout=90.0
+            timeout=120.0
         )
         duration_ms = int((time.time() - start_time) * 1000)
 

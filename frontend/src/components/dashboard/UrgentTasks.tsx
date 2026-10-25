@@ -29,10 +29,10 @@ export const UrgentTasks: React.FC<UrgentTasksProps> = ({
         <div>
           <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <CheckSquare className="w-5 h-5 text-amber-500" />
-            <span>High-Priority Action Items</span>
+            <span>Urgent Tasks</span>
           </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-            Key deliverables automatically extracted by local AI
+            Extracted from your documents
           </p>
         </div>
 
@@ -48,10 +48,10 @@ export const UrgentTasks: React.FC<UrgentTasksProps> = ({
       {pendingTasks.length === 0 ? (
         <div className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800 text-center">
           <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-            🎉 All caught up! No high-priority action items pending.
+            🎉 All caught up! No pending urgent tasks.
           </p>
           <p className="text-[11px] text-slate-400 mt-1">
-            Upload new documents to extract upcoming deadlines and tasks.
+            Upload documents to extract deadlines and tasks.
           </p>
         </div>
       ) : (

@@ -68,13 +68,26 @@ export const DocumentListView: React.FC<DocumentListViewProps> = ({
 
   return (
     <div className="space-y-6">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <FileText className="w-5 h-5 text-emerald-500" />
+            <span>Documents</span>
+          </h2>
+          <p className="text-xs text-slate-500 dark:text-slate-400">
+            {documents.length} document{documents.length === 1 ? '' : 's'} stored locally
+          </p>
+        </div>
+      </div>
+
       {/* Search and Filters Bar */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
         <div className="relative flex-1 w-full">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
             type="text"
-            placeholder="Search documents by title, tags, or content..."
+            placeholder="Search documents..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-10 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
@@ -107,7 +120,7 @@ export const DocumentListView: React.FC<DocumentListViewProps> = ({
           >
             <option value="newest">Newest First</option>
             <option value="oldest">Oldest First</option>
-            <option value="tasks">Most Action Items</option>
+            <option value="tasks">Most Tasks</option>
           </select>
         </div>
       </div>
@@ -117,10 +130,10 @@ export const DocumentListView: React.FC<DocumentListViewProps> = ({
         <div className="p-12 text-center rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
           <FileText className="w-10 h-10 text-slate-400 mx-auto mb-2" />
           <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200">
-            No matching documents found
+            No documents found
           </h3>
           <p className="text-xs text-slate-400 mt-1">
-            Try adjusting your search terms or filters.
+            Try a different search term or filter.
           </p>
         </div>
       ) : (
@@ -133,7 +146,7 @@ export const DocumentListView: React.FC<DocumentListViewProps> = ({
               <div>
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <span className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-md truncate flex items-center gap-1.5">
-                    <Folder className="w-3 h-3 flex-shrink-0" />
+                    <Folder className="w-3.5 h-3.5 flex-shrink-0" />
                     <span className="truncate">{doc.suggested_folder || 'Documents'}</span>
                   </span>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500">
@@ -148,7 +161,7 @@ export const DocumentListView: React.FC<DocumentListViewProps> = ({
                   {doc.title}
                 </h3>
 
-                <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 leading-relaxed">
+                <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 mb-3 leading-relaxed">
                   {doc.summary}
                 </p>
 

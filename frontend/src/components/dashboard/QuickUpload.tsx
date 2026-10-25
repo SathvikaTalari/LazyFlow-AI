@@ -84,10 +84,10 @@ export const QuickUpload: React.FC<QuickUploadProps> = ({
         <div>
           <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-emerald-500" />
-            <span>Process New Document</span>
+            <span>Process Document</span>
           </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-            Summarize content, extract action items, and organize files locally.
+            Summarize content and extract tasks locally.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export const QuickUpload: React.FC<QuickUploadProps> = ({
             }`}
           >
             <UploadCloud className="w-3.5 h-3.5" />
-            <span>File Upload</span>
+            <span>Upload File</span>
           </button>
 
           <button
@@ -126,7 +126,7 @@ export const QuickUpload: React.FC<QuickUploadProps> = ({
             }`}
           >
             <ClipboardList className="w-3.5 h-3.5" />
-            <span>Try Sample</span>
+            <span>Sample Demos</span>
           </button>
         </div>
       </div>
@@ -144,7 +144,7 @@ export const QuickUpload: React.FC<QuickUploadProps> = ({
           <div className="flex gap-3">
             <input
               type="text"
-              placeholder="Optional: Custom document title (e.g. Q4 Executive Briefing)"
+              placeholder="Document title (optional)"
               value={customTitle}
               onChange={(e) => setCustomTitle(e.target.value)}
               className="flex-1 px-4 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
@@ -173,10 +173,10 @@ export const QuickUpload: React.FC<QuickUploadProps> = ({
               <UploadCloud className="w-6 h-6" />
             </div>
             <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
-              Drag & Drop your document here, or <span className="text-emerald-600 dark:text-emerald-400 underline">browse files</span>
+              Drop files here, or <span className="text-emerald-600 dark:text-emerald-400 underline">browse</span>
             </p>
             <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
-              Supports Markdown (.md), Text (.txt), PDF (.pdf), Word (.docx), JSON (.json), CSV (.csv)
+              Supports PDF, DOCX, TXT, MD, CSV, JSON
             </p>
           </div>
         </div>
@@ -187,7 +187,7 @@ export const QuickUpload: React.FC<QuickUploadProps> = ({
         <form onSubmit={handlePasteSubmit} className="space-y-4">
           <input
             type="text"
-            placeholder="Document title (e.g. Team Standup Notes)"
+            placeholder="Document title (optional)"
             value={customTitle}
             onChange={(e) => setCustomTitle(e.target.value)}
             className="w-full px-4 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
@@ -195,7 +195,7 @@ export const QuickUpload: React.FC<QuickUploadProps> = ({
 
           <textarea
             rows={5}
-            placeholder="Paste your meeting transcript, spec sheet, email thread, or action plan here..."
+            placeholder="Paste your notes or text here..."
             value={pasteContent}
             onChange={(e) => setPasteContent(e.target.value)}
             className="w-full p-4 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 resize-none font-mono"

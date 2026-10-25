@@ -25,7 +25,7 @@ export const ModelComparisonView: React.FC<ModelComparisonViewProps> = ({
 
   const [modelA, setModelA] = useState(defaultA);
   const [modelB, setModelB] = useState(defaultB);
-  const [selectedSampleId, setSelectedSampleId] = useState<string>(samples[0]?.id || 'roadmap-meeting');
+  const [selectedSampleId, setSelectedSampleId] = useState<string>(samples[0]?.id || 'sample-roadmap');
   const [customText, setCustomText] = useState('');
   const [useCustomText, setUseCustomText] = useState(false);
 
@@ -36,12 +36,14 @@ export const ModelComparisonView: React.FC<ModelComparisonViewProps> = ({
 
   useEffect(() => {
     if (availableModels.length > 0) {
-      if (!modelA || !availableModels.includes(modelA)) setModelA(availableModels[0]);
+      if (!modelA || !availableModels.includes(modelA)) {
+        setModelA(availableModels[0]);
+      }
       if (!modelB || !availableModels.includes(modelB)) {
         setModelB(availableModels.length > 1 ? availableModels[1] : availableModels[0]);
       }
     }
-  }, [availableModels]);
+  }, [availableModels, modelA, modelB]);
 
   const loadHistory = async () => {
     try {
@@ -53,7 +55,15 @@ export const ModelComparisonView: React.FC<ModelComparisonViewProps> = ({
   };
 
   useEffect(() => {
-    loadHistory();
+    let mounted = true;
+    fetchComparisonHistory()
+      .then((hist) => {
+        if (mounted) setHistory(hist);
+      })
+      .catch((err) => console.error('Failed to load comparison history:', err));
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const handleRunComparison = async () => {
